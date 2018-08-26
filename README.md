@@ -21,7 +21,7 @@ curl -XPOST 192.168.222.10/app
 The response should be the same as a GET request.
 
 To see the documents stored in the datebase you can use kibana (once it's ready)  
-on the following address:
+on the following address:  
 http://192.168.222.10:8080
 
 When promped for the index pattern, enter 'eventlog'.  
