@@ -1,0 +1,26 @@
+version: "2"
+services:
+
+  api:
+    image: api
+    container_name: api
+    ports:
+      - "80:8080"
+    volumes:
+      - ./api.py:/opt/app/api.py:ro
+    restart: always
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.3.2
+    container_name: elasticsearch
+    environment:
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - xpack.security.enabled=false
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      -  9200:9200
+    restart: always
