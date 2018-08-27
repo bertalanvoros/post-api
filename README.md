@@ -27,9 +27,12 @@ curl -XPOST 192.168.222.10/app
 
 The response should be the same as a GET request.
 
-To see the documents stored in the datebase you can use kibana (once it's ready)  
+To see the documents stored in the datebase you can use kibana when using option_2 (once it's ready)  
 on the following address:  
 http://192.168.222.10:8080
+
+Alternatively the following curl command will list all documents stored in the relevant index:  
+curl -XGET 'http://192.168.222.10:9200/eventlog/_search?pretty=true&q=*'
 
 When promped for the index pattern, enter 'eventlog'.  
 The timestamp documents can then be seen under the discovery tab.
