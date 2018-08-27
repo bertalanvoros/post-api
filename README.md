@@ -30,10 +30,10 @@ The response should be the same as a GET request.
 
 To see the documents stored in the datebase you can use kibana (once it's ready) when using option_2   
 on the following address:  
-http://localhost:8080
+http://localhost:8080  
+
+When promped for the index pattern, enter 'eventlog'.  
+The timestamp documents can then be seen under the discovery tab.  
 
 Alternatively the following curl command will list all documents stored in the relevant index:  
 curl -XGET 'http://localhost:9200/eventlog/_search?pretty=true&q=*'  
-
-When promped for the index pattern, enter 'eventlog'.  
-The timestamp documents can then be seen under the discovery tab.
