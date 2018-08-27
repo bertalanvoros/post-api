@@ -1,6 +1,13 @@
 # post-api
 Saves a timestamp into a database.
 
+There are two options to chose from;  
+Option_1 launches the application without Kibana for better performance  
+on computers with limited resources.
+
+Option_2 launches the application with Kibana, it takes longer to load but  
+the database can be accessed using a web browser.
+
 Please note, it might take some time for tha application to be ready  
 after having issued the 'vagrant up' command.  
 
